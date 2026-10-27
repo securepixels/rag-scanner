@@ -612,7 +612,7 @@ class RAGScanner:
                 test_name=attack["name"],
                 category=attack["category"],
                 severity=attack["severity"],
-                passed=True,  # API error is not a vulnerability
+                passed=False,  # API error is not a vulnerability
                 query=attack["query"],
                 injected_payload=mal_doc["text"][:200],
                 model_response=f"API Error: {str(e)[:200]}",
